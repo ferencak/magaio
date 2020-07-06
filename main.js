@@ -5,15 +5,20 @@ const path = require('path')
 const url = require('url')
 const diskdb = require('diskdb')
 const fs = require('fs')
+const hwid = require('hwid')
+const fetch = require('node-fetch');
 
-if (!fs.existsSync('/mag/db')) {
-  fs.mkdirSync('/mag')
-  fs.mkdirSync('/mag/db')
+if (!fs.existsSync('/@mag')) {
+  fs.mkdirSync('/@mag')
+}
+if (!fs.existsSync('/@mag/local')) {
+  fs.mkdirSync('/@mag/local')
 }
 
 let mainWindow = null, 
-    dev = false, 
-    db = diskdb.connect('/mag/db', ['application']);
+    dev = false
+
+diskdb.connect('/@mag/local', ['application', 'config'])
 
 if (process.env.NODE_ENV !== undefined && process.env.NODE_ENV === 'development') {
   dev = true
@@ -24,34 +29,41 @@ if (process.platform === 'win32') {
   app.commandLine.appendSwitch('force-device-scale-factor', '1')
 }
 
-function start() {
-  let config = db.application.find()
+async function start() {
+  let config = diskdb.config.find()
 
   if (config.length == 0) 
-    db.application.save({license: null})
+    diskdb.config.save({license: null})
   
-  if (config.length > 0 && config[0].license_key != null) {
-    // TODO: Check if license is valid
-    // Application window
-    if (mainWindow === null)
-      createWindow(950, 650)
-
+  if (config.length > 0 && config[0].license != null) {
+    let hwidKey = await hwid.getHWID()
+    fetch(`http://89.203.248.241/api/index.php?event=check_license&license=${config[0].license}&hwid=${hwidKey}`)
+      .then(res => res.json())
+      .then(json => {
+        json.status == 'success' ?
+          mainWindow === null ? createWindow(950, 650, false) : console.error('Main', 'Window already created')
+        :
+          mainWindow === null ? createWindow(320, 360, false) : console.error('Main', 'Window already created')
+      })
   } else {
     // Login window
     if (mainWindow === null)
-    createWindow(320, 360)
+      createWindow(320, 360, false)
 
   }
   
 }
 
-function createWindow(width, height) {
+function createWindow(width, height, canResize) {
   mainWindow = new BrowserWindow({
     width: width,
     height: height,
     show: false,
+    frame: false,
+    transparent: true,
+    resizable: canResize,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true, 
     }
   })
 

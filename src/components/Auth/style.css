@@ -1,0 +1,120 @@
+.title {
+  color: #ffffff;
+  font-size: 3.125rem;
+  margin: 0 auto;
+  margin-top: 17vh;
+}
+.under-title {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-top: 34vh;
+  position: absolute;
+  left: 8.5rem;
+  margin-left: -0.625rem;
+  display: -webkit-box;
+}
+
+.license-input {
+  position: absolute;
+  top: 58%;
+  left: 14%;
+  -ms-transform: translate(-50%, -50%);
+  border: 0;
+  border-radius: 0.25rem;
+  height: 1.625rem;
+  width: 13.230rem;
+  background: #171c2b;
+  color: #3a435d;
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  font-weight: 100;
+  font-family: 'BalooBhai';
+  width: 13.203rem;
+}
+
+.license-input::selection{
+  background: #c7c7c70d;
+  color: #b758589e;
+}
+
+.license-input::placeholder {
+  color: #2d313e;
+  text-transform: none;
+}
+
+.input-title {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  display: -webkit-box;
+  font-size: 11px;
+  color: #262c3e;
+}
+
+.sign-in-button {
+  position: absolute;
+  top: 209px;
+  left: 13.25rem;
+  border: 0;
+  background: -o-linear-gradient(left, #71348a, #2c1d48);
+  background: -webkit-gradient(linear, left top, right top, from(#71348a), to(#2c1d48));
+  background: linear-gradient(90deg, #71348a, #2c1d48);
+  color: white;
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
+  font-family: 'BalooBhai';
+  width: 3.9375rem;
+  font-size: 10px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 0.625rem -0.0625rem black;
+  box-shadow: 0 0 0.625rem -0.0625rem black;
+  cursor: pointer;
+  height: 28px;
+}
+
+.checkbox-store-license {
+  position: absolute;
+  top: 67.5%;
+  left: 41px;
+  border: 0px;
+  width: 10px;
+}
+
+.checkbox-store-license-span {
+  position: absolute;
+  top: 68%;
+  left: 63px;
+  font-size: 10px;
+  color: #36374e;
+}
+
+.alert-error {
+  position: absolute;
+  top: 75%;
+  left: 30%;
+  display: -webkit-box;
+  color: white;
+  background: linear-gradient(90deg, #9e143a, #a5244e);
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 17px -3px black;
+  text-transform: uppercase;
+}
+
+.alert-authorized {
+  position: absolute;
+    top: 75%;
+    left: 9%;
+    display: -webkit-box;
+    color: white;
+    background: linear-gradient(90deg, #3e9484, #125448);
+    font-size: 0.625rem;
+    padding: 0.625rem;
+    border-radius: 0.4375rem;
+    -webkit-box-shadow: 0 0 1.0625rem -0.1875rem black;
+    box-shadow: 0 0 1.0625rem -0.1875rem black;
+    text-transform: uppercase;
+}

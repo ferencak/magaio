@@ -1,0 +1,45 @@
+html {
+  overflow: hidden;
+}
+
+html, body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  font-family: 'BalooBhai';
+}
+
+@font-face {
+  font-family: 'BalooBhai';
+  src: url('../fonts/BalooBhai-Regular.ttf')  format('truetype');
+}
+
+.app-content {
+  display: -webkit-box;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  background: #10111f;
+  border-radius: 6px;
+  padding: 6px;
+  -webkit-app-region: no-drag;
+}
+
+input:focus{
+  outline: none;
+}
+
+.app-version {
+  position: absolute;
+  bottom: 6px;
+  left: 1.25rem;
+  width: -webkit-fill-available;
+  display: -webkit-box;
+  color: #363550;
+  font-size: 9px;
+}
