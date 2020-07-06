@@ -5,7 +5,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <h1 className="test">asdasd</h1>
+      <h1 className="test">Dashboard</h1>
     )
   }
 

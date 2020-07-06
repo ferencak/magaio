@@ -35,3 +35,13 @@
 .maximize:hover {
   color: #FF605C!important;
 }
+
+.top-bar-title {
+  color: white;
+  font-size: 11px;
+  line-height: 30px;
+  background: #252635;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+}

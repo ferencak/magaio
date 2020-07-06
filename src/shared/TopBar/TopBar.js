@@ -10,6 +10,7 @@ class TopBar extends React.Component {
     return (
       <React.Fragment>
         <div className="top-bar">
+          <p className="top-bar-title">MAG AIO</p>
           <div className="icon-group float-right">
             <FontAwesomeIcon icon={faCircle} className="icon minimize"/>
             <FontAwesomeIcon icon={faCircle} className="icon maximize"/>
