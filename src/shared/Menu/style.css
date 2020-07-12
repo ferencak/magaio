@@ -1,0 +1,91 @@
+.menu-bar {
+  width: -webkit-fill-available;
+  height: 10vh;
+  margin-top: 40px;
+  display: -webkit-box;
+}
+
+.menu-bar .inner {
+  width: auto;
+  display: -webkit-box;
+  margin: 0 auto;
+  text-align: center;
+  background: #a7a7a708;
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: fit-content;
+  box-shadow: 0px 0px 16px -8px black;
+}
+
+.menu-bar .inner p {
+  text-align: center;
+  width: auto;
+  display: -webkit-inline-box;
+  padding: 5px;
+  background: #9292920d;
+  border-radius: 8px;
+  color: #ffffff26;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .25s;
+}
+.menu-bar .inner p:hover {
+  box-shadow: 0px 0px 12px -3px black;
+  color: #ffffffe8;
+}
+.menu-bar .inner p.active {
+  box-shadow: 0px 0px 12px -3px black;
+  background: linear-gradient(45deg, #72179e, #962d93);
+  color: #ffffff;
+}
+
+.user-menu {
+  display: -webkit-inline-box;
+  width: 120px;
+  position: absolute;
+  left: 78%;
+  height: 54px;
+  background: rgba(167,167,167,0.03137);
+  border-radius: 8px;
+  box-shadow: 0 0 1rem -0.5rem black;
+  cursor: pointer;
+  transition: .25s ease-in-out;
+}
+
+.user-menu:hover {
+  box-shadow: 0px 0px 10px 0px black;
+}
+
+.user-menu .user-avatar {
+  width: 35px;
+  border-radius: 500px;
+  display: inline-block;
+  margin-top: 9px;
+  margin-left: 12px;
+}
+
+.user-menu .user-name {
+  color: white;
+  font-size: 12px;
+  display: -webkit-box;
+  text-align: right;
+  width: auto;
+  line-height: 28px;
+  margin: auto;
+  margin-right: 23px;
+  margin-top: 6px;
+}
+
+.user-menu .user-license {
+  font-size: 11px;
+  display: table-caption;
+  margin-top: 32px;
+  position: relative;
+  left: -64px;
+  top: -5px;
+  color: #ffffff1a;
+}

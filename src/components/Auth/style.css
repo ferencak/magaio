@@ -106,15 +106,15 @@
 
 .alert-authorized {
   position: absolute;
-    top: 75%;
-    left: 9%;
-    display: -webkit-box;
-    color: white;
-    background: linear-gradient(90deg, #3e9484, #125448);
-    font-size: 0.625rem;
-    padding: 0.625rem;
-    border-radius: 0.4375rem;
-    -webkit-box-shadow: 0 0 1.0625rem -0.1875rem black;
-    box-shadow: 0 0 1.0625rem -0.1875rem black;
-    text-transform: uppercase;
+  top: 75%;
+  left: 9%;
+  display: -webkit-box;
+  color: white;
+  background: linear-gradient(90deg, #3e9484, #125448);
+  font-size: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 0.4375rem;
+  -webkit-box-shadow: 0 0 1.0625rem -0.1875rem black;
+  box-shadow: 0 0 1.0625rem -0.1875rem black;
+  text-transform: uppercase;
 }

@@ -83,7 +83,6 @@ class Auth extends React.Component {
   }
 
   done() {
-    console.log('DONEE')
     let db = Diskdb.connect('/@mag/local', ['config'])
     db.config.remove()
     db = Diskdb.connect('/@mag/local', ['config'])
